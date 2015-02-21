@@ -1,0 +1,13 @@
+<div id="content" ng-controller="downgradeIdController">
+    <h1>Enter the MatriId to become free member:</h1>
+    <div class="removeOfferResponse">{{downOfferResponse}}</div>
+    <div class="form_settings">
+      <p><span>MatriId :</span>
+          <input type="text" value="" name="downOffer" ng-model="downOffer" ng-pattern="/^[A-Z]{1}[0-9]+$/" maxlength="15">
+      </p>
+      <p style="padding-top: 15px">
+        <span>&nbsp;</span>
+        <input type="submit" value="Submit" name="submit" ng-disabled="!downOffer" ng-class="{disableButton:!downOffer,submit:downOffer}" ng-click="getDownOffer()">
+      </p>
+    </div>
+</div>

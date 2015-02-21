@@ -1,0 +1,14 @@
+<div id="content" ng-controller="removeOfferController">
+    <h1>Enter the MatriId of the member to remove offer:</h1>
+    <div class="removeOfferResponse">{{removeXhrResponse}}</div>
+    <div class="form_settings">
+      <p><span>MatriId :</span>
+          <input type="text" value="" name="removeOffer" ng-model="removeOffer" ng-pattern="/^[A-Z]{1}[0-9]+$/" maxlength="15">
+      </p>
+      <p style="padding-top: 15px">
+        <span>&nbsp;</span>
+        <input type="submit" value="Submit" name="submit" ng-disabled="!removeOffer" ng-class="{disableButton:!removeOffer,submit:removeOffer}" ng-click="getRemoveOffer()">
+      </p>
+    </div>
+    
+</div>

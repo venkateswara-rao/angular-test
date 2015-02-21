@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="js/angular.min.js"></script>
+
+<body>
+
+<div ng-app="">
+ 
+<p>Input something in the input box:</p>
+<p>Name: <input type="text" ng-model="testname" ></p>
+<p ng-bind="testname"></p>
+
+
+<div ng-app="" ng-init="firstName='Dinesh'">
+
+<p>The name is <span ng-bind="firstName"></span></p>
+<p>My first expression: {{ 5 + 5 }}</p>
+
+</div>
+
+</div>
+
+</body>
+</html>

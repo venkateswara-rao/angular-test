@@ -1,0 +1,23 @@
+<div id="content" ng-controller="freePaidIdcontroller">
+    
+    <h1>Get {{memberShipType}} MatriIds</h1>
+    
+    <input type="radio" name="freeMaleFemale" value="1" ng-click="getIdsMaleFemale(1)" ng-model="freeMaleFemale">Male
+    <input type="radio" name="freeMaleFemale" value="2" ng-click="getIdsMaleFemale(2)" ng-model="freeMaleFemale">FeMale
+
+    <div class="form_settings" ng-show="showHideTable">
+      <p><span>Number Of Ids (max : 75)</span><input type="text" value="" name="name" ng-model="idLimit" ng-pattern="/^\d{1,2}$/" maxlength="2"></p>
+      <p style="padding-top: 15px">
+        <span>&nbsp;</span>
+        <input type="submit" value="Submit" name="name" ng-disabled="!idLimit" ng-class="{disableButton:!idLimit,submit:idLimit}" ng-click="getIdsMaleFemaleLimit()">
+      </p>
+    </div>
+
+    <table style="width:100%; border-spacing:0;" ng-show="showHideTable">
+          <tbody>
+          <tr><th>Sno</th><th>MatriId</th><th>Member Ship</th><th>Gender</th></tr>
+          <tr ng-repeat="freeId in freeIds"><td>{{$index+1}}</td><td>{{freeId.MatriId}}</td><td>{{EntryTypeShow(freeId.EntryType)}}</td><td>{{GenderShow(freeId.Gender)}}</td></tr>
+        </tbody>
+    </table>
+
+</div>

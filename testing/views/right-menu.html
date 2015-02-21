@@ -1,0 +1,18 @@
+<div class="sidebar" ng-controller="sidebarController">
+  
+  <div ng-switch on="checkActiveMenu()">
+    <div ng-switch-when="/">
+      <ul>
+        <li><a href="#free_id">Free Matri Id</a></li>
+        <li><a href="#paid_id">Paid Matri Id</a></li>
+      </ul>
+    </div>
+    <div ng-switch-when="/removeoffer">
+      <ul>
+        <li><a href="#removeoffer">Remove Current Offer</a></li>
+        <li><a href="#downgrade_id">Downgrade MatriId (make free member)</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
